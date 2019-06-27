@@ -1,53 +1,57 @@
-class Person {
-  personName = 'Person';
+// class Person {
+//   personName = 'Person';
 
-  constructor() {
-    this.personMethod();
-  }
+//   personMethod = function() {
+//     console.log('personMethod class Person');
+//   };
+// }
 
-  personMethod() {
-    console.log('doSomething class Person');
-  }
+// class Student extends Person {
+//   studentName = 'Student';
+
+//   // studentMethod() {
+//   //   console.log(this.frontendStudentName);
+//   //   // this.abc = function() {};
+//   //   // console.log('studentMethod class Student');
+//   // }
+// }
+
+// // const student = new Student();
+// // student.studentMethod();
+
+// class FrontendStudent extends Student {
+//   frontendStudentName = 'FrontendStudent';
+
+//   personMethod() {
+//     console.log('personMethod');
+//   }
+
+//   frontendStudentMethod() {
+//     super.personMethod();
+//     // super.studentMethod();
+//     // console.log('frontendStudentMethod class Frontend Student');
+//   }
+// }
+
+// const frontendStudent = new FrontendStudent();
+// // // console.log('TCL: frontendStudent', frontendStudent);
+// frontendStudent.frontendStudentMethod();
+
+function doMyFunction(param, param2) {
+  console.log(param2);
 }
 
-class Student extends Person {
-  studentName = 'Student';
+// const obj = {
+//   // abc: 'abc'
+// };
 
-  constructor(firstName, lastName) {
-    super();
-    // this.studentMethod();
-  }
+// doMyFunction()
+// const array = [123, 234];
 
-  studentMethod() {
-    // super.doSomething();
-    console.log('doSomething class Student');
-  }
-}
+doMyFunction.call(obj, [123, 234], [555, 777]);
+// doMyFunction.call(obj, 123, 234);
 
-class FrontendStudent extends Student {
-  frontendStudentName = 'FrontendStudent';
+// const doSomething = doMyFunction.bind({ abc: 'abc' }, 123, 555);
+// doSomething(345, 666);
 
-  constructor(firstName, lastName) {
-    super();
-    this.frontendStudentMethod();
-  }
-
-  frontendStudentMethod() {
-    // super.doSomething();
-    console.log('doSomething class Frontend Student');
-  }
-}
-
-const frontendStudent = new FrontendStudent();
-console.log('TCL: frontendStudent', frontendStudent);
-
-// function Person() {}
-// Person.prototype.personMethod = function() {};
-// function Student() {}
-
-// Student.prototype = Object.create(Person.prototype);
-// Student.prototype.constructor = Student;
-
-// Student.prototype.studentMethod = function() {};
-// const student = new Student();
-// console.log('TCL: student', student);
+// doMyFunction();
