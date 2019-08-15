@@ -1,0 +1,36 @@
+.container {
+  text-align: center;
+  width: 300px;
+  padding: 30px;
+  background: white;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 8px;
+}
+
+.container .links {
+  font-size: 15px;
+}
+
+.container .links a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  color: black;
+  font-family: sans-serif;
+  margin: 2px;
+  line-height: 35px;
+}
+
+.container .links a.selected {
+  color: blue;
+}
+
+.disabled {
+  pointer-events: none;
+  color: grey;
+}
+
+.hidden {
+  display: none;
+}

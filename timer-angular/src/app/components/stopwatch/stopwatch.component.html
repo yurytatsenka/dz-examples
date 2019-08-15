@@ -1,0 +1,18 @@
+<div class="output">{{ output }}</div>
+<div class="buttons">
+  <button
+    (click)="onStartButtonClick()"
+    class="{{ currentMode === Mode.started ? 'disabled' : '' }}"
+  >
+    Start
+  </button>
+  <button
+    (click)="onStopButtonClick()"
+    class="{{ currentMode === Mode.stopped ? 'disabled' : '' }}"
+  >
+    Stop
+  </button>
+  <button (click)="onResetButtonClick()" class="{{ currentMode === Mode.reset ? 'disabled' : '' }}">
+    Reset
+  </button>
+</div>

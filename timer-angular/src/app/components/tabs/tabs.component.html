@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="links">
+    <a
+      (click)="enableTab(Tabs.clock)"
+      class="{{ currentTab === Tabs.clock ? 'selected' : '' }}"
+      href="#"
+      >clock</a
+    >
+    <a
+      (click)="enableTab(Tabs.stopwatch)"
+      class="{{ currentTab === Tabs.stopwatch ? 'selected' : '' }}"
+      href="#"
+      >stopwatch</a
+    >
+    <a
+      (click)="enableTab(Tabs.timer)"
+      class="{{ currentTab === Tabs.timer ? 'selected' : '' }}"
+      href="#"
+      >timer</a
+    >
+  </div>
+  <div class="tabs">
+    <div class="{{ currentTab !== Tabs.clock ? 'hidden' : '' }}">
+      <app-clock></app-clock>
+    </div>
+    <div class="{{ currentTab !== Tabs.stopwatch ? 'hidden' : '' }}">
+      <app-stopwatch></app-stopwatch>
+    </div>
+    <div class="{{ currentTab !== Tabs.timer ? 'hidden' : '' }}">
+      <app-timer></app-timer>
+    </div>
+  </div>
+</div>
